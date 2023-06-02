@@ -7,20 +7,24 @@ namespace ConaLuk.Honey
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private float rotationSpeed;
+        [SerializeField] private float rotationSpeed = 3f;
 
         //time.deltatime & speed variable
         [SerializeField] private GameObject _beeCharacter;
         [SerializeField] private KeyCode rotateClockwise;
         [SerializeField] private KeyCode rotateAntiClockwise;
 
+        private void Start()
+        {
+            rotationSpeed = 250f;
+        }
 
         void Update()
         {
             if (Input.GetKey(rotateAntiClockwise))
             {
                 Debug.Log("Pressed A");
-                _beeCharacter.transform.Rotate(0, 0, 1);
+                _beeCharacter.transform.Rotate(0, 0, 1 * Time.deltaTime * rotationSpeed);
             }
             else if (Input.GetKeyUp(rotateAntiClockwise))
             {
@@ -31,7 +35,7 @@ namespace ConaLuk.Honey
             if(Input.GetKey(rotateClockwise))
             {
                 Debug.Log("Pressed D");
-                _beeCharacter.transform.Rotate(0, 0, -1);
+                _beeCharacter.transform.Rotate(0, 0, -1 * Time.deltaTime * rotationSpeed);
             }
             else if (Input.GetKeyUp(rotateClockwise))
             {

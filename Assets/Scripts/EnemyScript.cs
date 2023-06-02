@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ConaLuk.Honey
 {
@@ -26,8 +27,24 @@ namespace ConaLuk.Honey
         void Update()
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, _target.position, movementSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, _target.position, movementSpeed * Time.deltaTime);
 
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Honey")
+            {
+                SceneManager.LoadScene("Game Over");
+            }
+
+            if (collision.gameObject.tag == "Bee")
+            {
+                Destroy(beetleEnemy);
+            }
+        }
+
+
+
     }
 }
