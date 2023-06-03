@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  beeCharacter: {fileID: 0}
-  honeyGoal: {fileID: 0}
+  spawnManager: {fileID: 2869036711901335790, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
+  beeCharacter: {fileID: 1316191161520306496, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
+  honeyGoal: {fileID: 372826986598883103, guid: bf75bd71afea4094ab849600e154f859, type: 3}
   beetleEnemy: {fileID: 7608167254557512464}

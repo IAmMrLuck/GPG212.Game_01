@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &176384399 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 372826986598883103, guid: bf75bd71afea4094ab849600e154f859, type: 3}
-  m_PrefabInstance: {fileID: 372826986690950800}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &378748517
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,11 +207,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1470699098 stripped
+--- !u!1 &1026400057
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1316191161842579985, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
-  m_PrefabInstance: {fileID: 1316191161094483019}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026400059}
+  - component: {fileID: 1026400058}
+  m_Layer: 0
+  m_Name: Beetle Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1026400058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026400057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e04bf113f3134e45a36a003a5675a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beetleEnemy: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
+--- !u!4 &1026400059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026400057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.77680993, y: 0.4296055, z: -0.03467453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &372826986690950800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,7 +261,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 372826986598883074, guid: bf75bd71afea4094ab849600e154f859, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 372826986598883074, guid: bf75bd71afea4094ab849600e154f859, type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,11 +318,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1316191161520306496, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
       propertyPath: m_Name
-      value: Bee Manager
+      value: Game Manager
       objectReference: {fileID: 0}
     - target: {fileID: 1316191161520306501, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1316191161520306501, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -331,68 +366,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
---- !u!1001 &7608167254208056488
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_Name
-      value: Beetle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512466, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608167254557512467, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: honeyGoal
-      value: 
-      objectReference: {fileID: 176384399}
-    - target: {fileID: 7608167254557512467, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-      propertyPath: beeCharacter
-      value: 
-      objectReference: {fileID: 1470699098}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
