@@ -9,8 +9,9 @@ namespace ConaLuk.Honey
 
     public class EnemyScript : MonoBehaviour
     {
-        [SerializeField] private float movementSpeed = 0.1f;
 
+        [SerializeField] private float movementSpeed = 0.1f;
+        public SpawnManager spawnManager;
         [SerializeField] private GameObject beeCharacter;
         [SerializeField] private GameObject honeyGoal;
         [SerializeField] private GameObject beetleEnemy;
@@ -19,7 +20,6 @@ namespace ConaLuk.Honey
         void Start()
         {
             _target = honeyGoal.transform;
-                      
 
         }
 
@@ -41,6 +41,7 @@ namespace ConaLuk.Honey
             if (collision.gameObject.tag == "Bee")
             {
                 Destroy(beetleEnemy);
+                spawnManager.SpawnBeetle();
             }
         }
 
