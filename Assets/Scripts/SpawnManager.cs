@@ -1,32 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
-public class SpawnManager : MonoBehaviour
+namespace ConaLuk.Honey
 {
-    public GameObject beetleEnemy;
-    private Vector3 beetleSpawnPosition;
 
-    private void Start()
+
+    public class SpawnManager : MonoBehaviour
     {
-        Invoke("SpawnBeetle", 3);
+        public GameObject beetleEnemy;
+        private Vector2 beetleSpawnPosition;
+
+        private void Start()
+        {
+            Invoke("SpawnBeetle", 3);
+
+        }
+
+        public void SpawnBeetle()
+        {
+
+            RandomSpawnPosition();
+            GameObject NewBeetle = Instantiate(beetleEnemy);
+            NewBeetle.transform.position = beetleSpawnPosition;
+
+        }
+
+        public void RandomSpawnPosition()
+        {
+            beetleSpawnPosition = Random.insideUnitCircle * Random.Range(12, 12);
+        }
+
 
     }
-
-    public void SpawnBeetle()
-    {
-
-        RandomSpawnPosition();
-        GameObject NewBeetle = Instantiate(beetleEnemy);
-        NewBeetle.transform.position = beetleSpawnPosition;
-
-    }
-
-    public void RandomSpawnPosition()
-    {
-        beetleSpawnPosition = Random.onUnitSphere * Random.Range(10, 10);
-    }
-
-
 }
