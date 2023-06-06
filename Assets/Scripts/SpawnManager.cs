@@ -8,18 +8,24 @@ namespace ConaLuk.Honey
 
     public class SpawnManager : MonoBehaviour
     {
-        public GameObject beetleEnemy;
-        private Vector2 beetleSpawnPosition;
+        [SerializeField] private GameObject beetleEnemy;
+        [SerializeField] private GameObject waspEnemy;
+        [SerializeField] private Transform[] spawnPoints;
+        
 
         private void Start()
         {
             Invoke("SpawnBeetle", 3);
 
+            Invoke("StartSpawnCountdown", 5f);
+
         }
 
         public void SpawnBeetle()
         {
+
             GameObject newBeetle = Instantiate(beetleEnemy);
+
             Vector3 screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
             float xPos, yPos;
@@ -53,25 +59,20 @@ namespace ConaLuk.Honey
             float offset = Random.Range(1f, 2f);
             Vector3 spawnPosition = new Vector3(xPos, yPos, 0) * offset;
             newBeetle.transform.position = spawnPosition;
+
         }
 
-        //public void SpawnBeetle()
-        //{
+        private void StartSpawnCountdown()
+        {
+            InvokeRepeating("SpawnWasp", 0f, 9f);
+        }
 
-        //    GameObject NewBeetle = Instantiate(beetleEnemy);
-        //    Vector2 screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        public void SpawnWasp()
+        {
+            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            Instantiate(waspEnemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
+        }
 
-        //    float xPos = Random.Range(screenBounds.x + 1, screenBounds.x + 2);
-        //    float yPos = Random.Range(screenBounds.y + 1, screenBounds.y + 2);
-        //    NewBeetle.transform.position = new Vector2(xPos, yPos);
-        //}
-
-        //public void RandomSpawnPosition()
-        //{
-
-
-        //    beetleSpawnPosition = Random.insideUnitCircle * Random.Range(11, 12);
-        //}
 
 
     }

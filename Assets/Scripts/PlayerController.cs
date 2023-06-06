@@ -10,7 +10,8 @@ namespace ConaLuk.Honey
         [SerializeField] private float rotationSpeed = 3f;
 
         //time.deltatime & speed variable
-        [SerializeField] private GameObject _beeCharacter;
+        [SerializeField] private GameObject gameManager;
+        [SerializeField] private GameObject beeCharacter;
         [SerializeField] private KeyCode rotateClockwise;
         [SerializeField] private KeyCode rotateAntiClockwise;
 
@@ -21,10 +22,14 @@ namespace ConaLuk.Honey
 
         void Update()
         {
+
+
             if (Input.GetKey(rotateAntiClockwise))
             {
                 Debug.Log("Pressed A");
-                _beeCharacter.transform.Rotate(0, 0, 1 * Time.deltaTime * rotationSpeed);
+                gameManager.transform.Rotate(0, 0, 1 * Time.deltaTime * rotationSpeed);
+                beeCharacter.transform.Rotate(0, 0, 1);
+
             }
             else if (Input.GetKeyUp(rotateAntiClockwise))
             {
@@ -35,7 +40,9 @@ namespace ConaLuk.Honey
             if(Input.GetKey(rotateClockwise))
             {
                 Debug.Log("Pressed D");
-                _beeCharacter.transform.Rotate(0, 0, -1 * Time.deltaTime * rotationSpeed);
+                gameManager.transform.Rotate(0, 0, -1 * Time.deltaTime * rotationSpeed);
+                beeCharacter.transform.Rotate(0, 0, -1);
+
             }
             else if (Input.GetKeyUp(rotateClockwise))
             {
