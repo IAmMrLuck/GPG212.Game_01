@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
-    public static TMP_Text highscoreText;
+    public TMP_Text highscoreText;
     public static float elapsedTime;
     private bool countingDown = true;
     private int score;
