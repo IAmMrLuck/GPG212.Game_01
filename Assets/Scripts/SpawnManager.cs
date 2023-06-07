@@ -64,7 +64,7 @@ namespace ConaLuk.Honey
 
         private void StartSpawnCountdown()
         {
-            InvokeRepeating("SpawnWasp", 0f, 9f);
+            InvokeRepeating("SpawnWasp", 0f, 15f);
         }
 
         public void SpawnWasp()
