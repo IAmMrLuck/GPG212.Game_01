@@ -9,8 +9,8 @@ namespace ConaLuk.Honey
 
     public class EnemyScript : MonoBehaviour
     {
-
-
+        [SerializeField] private Timer timer;
+        [SerializeField] private ParticleSystem _particleSystem;
 
         private float movementSpeed = 1f;
 
@@ -23,7 +23,7 @@ namespace ConaLuk.Honey
         void Start()
         {
             _target = honeyGoal.transform;
-
+            
         }
 
 
@@ -67,6 +67,8 @@ namespace ConaLuk.Honey
             if (collision.gameObject.tag == "Honey")
             {
                 SceneManager.LoadScene("Game Over");
+                timer.StopTimer();
+
             }
 
             if (collision.gameObject.tag == "Bee")

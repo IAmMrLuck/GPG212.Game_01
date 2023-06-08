@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1316191161520306502}
   - component: {fileID: 1316191161520306503}
   - component: {fileID: 2869036711901335790}
+  - component: {fileID: 5611254962637381531}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -100,7 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0
-  _beeCharacter: {fileID: 1316191161520306496}
+  gameManager: {fileID: 0}
+  beeCharacter: {fileID: 0}
   rotateClockwise: 100
   rotateAntiClockwise: 97
 --- !u!114 &2869036711901335790
@@ -116,6 +118,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beetleEnemy: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
+  waspEnemy: {fileID: 0}
+  spawnPoints: []
+--- !u!114 &5611254962637381531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316191161520306496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b6d9d15046cab44b44b7f9b7d31407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+  highscoreText: {fileID: 0}
 --- !u!1 &1316191161842579985
 GameObject:
   m_ObjectHideFlags: 0

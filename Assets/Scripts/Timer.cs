@@ -9,15 +9,12 @@ public class Timer : MonoBehaviour
     public TMP_Text highscoreText;
     public static float elapsedTime;
     private bool countingDown = true;
-    private int score;
     private int highscore;
-    private List<int> highscores = new List<int>();
 
     private void Start()
     {
-        highscore = PlayerPrefs.GetInt("Highscore", 0);
-        highscores = LoadHighScores();
-        highscoreText.text = "Highscore: " + highscore;
+        highscore = PlayerPrefs.GetInt("highscore");
+        highscoreText.text = "Highscore: " + FormatTime(highscore);
         StartTimer();
     }
 
@@ -30,7 +27,6 @@ public class Timer : MonoBehaviour
             {
                 elapsedTime = 0f;
                 countingDown = false;
-                StopTimer();
             }
         }
         else
@@ -48,43 +44,30 @@ public class Timer : MonoBehaviour
 
     public void StopTimer()
     {
-        score = Mathf.FloorToInt(elapsedTime);
+        Debug.Log("StopTimer() Called");
+        int score = Mathf.FloorToInt(elapsedTime);
         if (score > highscore)
         {
-            highscore = score;
-            highscoreText.text = "Highscore: " + highscore;
-            PlayerPrefs.SetInt("Highscore", highscore);
+            highscore = score; 
+            highscoreText.text = "Highscore: " + FormatTime(highscore);
+            PlayerPrefs.SetInt("highscore", highscore);
+            PlayerPrefs.Save();
+            Debug.Log("Saved()");
         }
 
-        highscores.Add(score);
-        highscores.Sort((a, b) => b.CompareTo(a));
-        highscores = highscores.GetRange(0, Mathf.Min(highscores.Count, 4));
-        SaveHighScores(highscores);
     }
 
     private void UpdateTimerText()
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
-    private List<int> LoadHighScores()
+    private string FormatTime(int timeInSeconds)
     {
-        List<int> loadedHighScores = new List<int>();
-        for (int i = 1; i <= 4; i++)
-        {
-            int score = PlayerPrefs.GetInt("Highscore" + i, 0);
-            loadedHighScores.Add(score);
-        }
-        return loadedHighScores;
-    }
-
-    private void SaveHighScores(List<int> highScores)
-    {
-        for (int i = 0; i < highScores.Count; i++)
-        {
-            PlayerPrefs.SetInt("Highscore" + (i + 1), highScores[i]);
-        }
+        int minutes = Mathf.FloorToInt(timeInSeconds / 60);
+        int seconds = Mathf.FloorToInt(timeInSeconds % 60);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
