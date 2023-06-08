@@ -59,8 +59,8 @@ public class Timer : MonoBehaviour
         Debug.Log("StopTimer() Called");
         PlayerPrefs.SetInt("TheHighscore", highscore);
 
-        Debug.Log("Set to True");
         int score = Mathf.FloorToInt(elapsedTime);
+
         if (score > highscore)
         {
             highscore = score; 

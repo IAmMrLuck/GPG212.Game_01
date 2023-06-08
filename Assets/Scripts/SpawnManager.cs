@@ -14,15 +14,11 @@ namespace ConaLuk.Honey
         [SerializeField] private GameObject waspEnemy;
         [SerializeField] private Transform[] spawnPoints;
 
-        public GameObject gameOverUI;
-
-
 
         private void Start()
         {
             beeCharacter.SetActive(true);
             Invoke("SpawnBeetle", 3);
-            gameOverUI.SetActive(false);
             Invoke("StartSpawnCountdown", 5f);
 
         }
@@ -77,13 +73,6 @@ namespace ConaLuk.Honey
         {
             Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(waspEnemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
-        }
-
-        public void GameOver()
-        {
-            beeCharacter.SetActive(false);
-            gameOverUI.SetActive(true);
-
         }
 
     }
