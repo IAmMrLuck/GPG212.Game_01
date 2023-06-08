@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public TMP_Text highscoreText;
     public static float elapsedTime;
+    private bool countingUp = false;
     private bool countingDown = true;
     private int highscore;
 
@@ -27,12 +28,17 @@ public class Timer : MonoBehaviour
             {
                 elapsedTime = 0f;
                 countingDown = false;
+                countingUp = true;
             }
         }
         else
         {
-            elapsedTime += Time.deltaTime;
-            UpdateTimerText();
+            if (countingUp == true)
+            {
+                elapsedTime += Time.deltaTime;
+                UpdateTimerText();
+            }
+
         }
     }
 
@@ -45,6 +51,8 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         Debug.Log("StopTimer() Called");
+        countingUp = false;
+        Debug.Log("Set to False");
         int score = Mathf.FloorToInt(elapsedTime);
         if (score > highscore)
         {

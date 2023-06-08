@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace ConaLuk.Honey
 {
@@ -13,7 +15,6 @@ namespace ConaLuk.Honey
         [SerializeField] private ParticleSystem _particleSystem;
 
         private float movementSpeed = 1f;
-
         public SpawnManager spawnManager;
         [SerializeField] private GameObject beeCharacter;
         [SerializeField] private GameObject honeyGoal;
@@ -23,7 +24,6 @@ namespace ConaLuk.Honey
         void Start()
         {
             _target = honeyGoal.transform;
-            
         }
 
 
@@ -66,9 +66,10 @@ namespace ConaLuk.Honey
         {
             if (collision.gameObject.tag == "Honey")
             {
-                SceneManager.LoadScene("Game Over");
+                // SceneManager.LoadScene("Game Over");
+                Debug.Log("Game Over");
                 timer.StopTimer();
-
+                spawnManager.GameOver();
             }
 
             if (collision.gameObject.tag == "Bee")
