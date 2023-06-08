@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
 
         gameOver = false;
         highscore = PlayerPrefs.GetInt("TheHighscore");
-        highscoreText.text = "Highscore: " + FormatTime(highscore);
+        highscoreText.text = "Highscore" + FormatTime(highscore);
         StartTimer();
     }
 
@@ -64,7 +64,7 @@ public class Timer : MonoBehaviour
         if (score > highscore)
         {
             highscore = score; 
-            highscoreText.text = "Highscore: " + FormatTime(highscore);
+            highscoreText.text = "Highscore" + FormatTime(highscore);
             PlayerPrefs.SetInt("TheHighscore", highscore);
             PlayerPrefs.Save();
             Debug.Log("Saved()");

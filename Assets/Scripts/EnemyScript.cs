@@ -74,7 +74,6 @@ namespace ConaLuk.Honey
             if (collision.gameObject.tag == "Bee")
             {
                 Destroy(beetleEnemy);
-                FindObjectOfType<SoundManager>().Play("SOUND TO PLAY"); 
                 spawnManager.SpawnBeetle();
  
             }

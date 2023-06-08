@@ -102,8 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0
-  gameManager: {fileID: 0}
-  beeCharacter: {fileID: 0}
+  soundManager: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
+  gameManager: {fileID: 1316191161520306496}
+  beeCharacter: {fileID: 2165490651785122982, guid: 19b9ee3b89a2e6b4281f141c75cae89f, type: 3}
   rotateClockwise: 100
   rotateAntiClockwise: 97
 --- !u!114 &2869036711901335790
@@ -118,9 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e04bf113f3134e45a36a003a5675a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beeCharacter: {fileID: 0}
+  beeCharacter: {fileID: 2165490651785122982, guid: 19b9ee3b89a2e6b4281f141c75cae89f, type: 3}
   beetleEnemy: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
-  waspEnemy: {fileID: 0}
+  waspEnemy: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
   spawnPoints: []
   gameOverUI: {fileID: 4264892707561220742, guid: ea07337ac5c49ac41b809713c01261cc, type: 3}
 --- !u!114 &5611254962637381531
@@ -135,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b6d9d15046cab44b44b7f9b7d31407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
-  highscoreText: {fileID: 0}
+  timerText: {fileID: 640719832316550849, guid: 60369376f4bffca4fbaf5ecc353458ea, type: 3}
+  highscoreText: {fileID: 7817840456333537419, guid: 55c7e55e68595cf4ab9ae8e40f528e62, type: 3}
   gameOver: 1
 --- !u!114 &5093770268820267773
 MonoBehaviour:

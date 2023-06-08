@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: 41e26f83ed279e24da4ea3d1a27ed048
+  - enabled: 1
     path: Assets/Scenes/Sacred Honey.unity
     guid: 1fe11c078f7f66e4d8829159a57ff1bd
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: d79af96047ab9c84c84d378f641e2962
-  - enabled: 1
-    path: Assets/Scenes/Title Screen.unity
-    guid: 41e26f83ed279e24da4ea3d1a27ed048
   m_configObjects: {}
