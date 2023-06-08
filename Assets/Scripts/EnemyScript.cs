@@ -13,10 +13,10 @@ namespace ConaLuk.Honey
     {
         [SerializeField] private Timer timer;
         [SerializeField] private ParticleSystem _particleSystem;
-
+        [SerializeField] private SceneLoader scene;
         private float movementSpeed = 1f;
         public SpawnManager spawnManager;
-        [SerializeField] private GameObject beeCharacter;
+        [SerializeField] private GameObject gameManager;
         [SerializeField] private GameObject honeyGoal;
         [SerializeField] private GameObject beetleEnemy;
         private Transform _target;
@@ -51,8 +51,6 @@ namespace ConaLuk.Honey
                 movementSpeed = 1.5f;
             }
 
-
-
             MoveObject();
         }
 
@@ -69,7 +67,8 @@ namespace ConaLuk.Honey
                 // SceneManager.LoadScene("Game Over");
                 Debug.Log("Game Over");
                 timer.StopTimer();
-                spawnManager.GameOver();
+
+                scene.LoadScene();
             }
 
             if (collision.gameObject.tag == "Bee")

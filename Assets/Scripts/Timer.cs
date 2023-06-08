@@ -8,13 +8,14 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public TMP_Text highscoreText;
     public static float elapsedTime;
-    private bool countingUp = false;
+    public bool gameOver = false;
     private bool countingDown = true;
     private int highscore;
 
     private void Start()
     {
-        highscore = PlayerPrefs.GetInt("highscore");
+        gameOver = false;
+        highscore = PlayerPrefs.GetInt("TheHighscore");
         highscoreText.text = "Highscore: " + FormatTime(highscore);
         StartTimer();
     }
@@ -28,17 +29,21 @@ public class Timer : MonoBehaviour
             {
                 elapsedTime = 0f;
                 countingDown = false;
-                countingUp = true;
             }
         }
         else
         {
-            if (countingUp == true)
+
+            if (gameOver == false)
             {
                 elapsedTime += Time.deltaTime;
                 UpdateTimerText();
             }
 
+            else
+            {
+                elapsedTime += 0;
+            }
         }
     }
 
@@ -51,14 +56,15 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         Debug.Log("StopTimer() Called");
-        countingUp = false;
-        Debug.Log("Set to False");
+        PlayerPrefs.SetInt("TheHighscore", highscore);
+
+        Debug.Log("Set to True");
         int score = Mathf.FloorToInt(elapsedTime);
         if (score > highscore)
         {
             highscore = score; 
             highscoreText.text = "Highscore: " + FormatTime(highscore);
-            PlayerPrefs.SetInt("highscore", highscore);
+            PlayerPrefs.SetInt("TheHighscore", highscore);
             PlayerPrefs.Save();
             Debug.Log("Saved()");
         }

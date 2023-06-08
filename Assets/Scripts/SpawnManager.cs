@@ -8,6 +8,8 @@ namespace ConaLuk.Honey
 
     public class SpawnManager : MonoBehaviour
     {
+        [SerializeField] private GameObject beeCharacter;
+
         [SerializeField] private GameObject beetleEnemy;
         [SerializeField] private GameObject waspEnemy;
         [SerializeField] private Transform[] spawnPoints;
@@ -18,8 +20,9 @@ namespace ConaLuk.Honey
 
         private void Start()
         {
+            beeCharacter.SetActive(true);
             Invoke("SpawnBeetle", 3);
-
+            gameOverUI.SetActive(false);
             Invoke("StartSpawnCountdown", 5f);
 
         }
@@ -78,6 +81,7 @@ namespace ConaLuk.Honey
 
         public void GameOver()
         {
+            beeCharacter.SetActive(false);
             gameOverUI.SetActive(true);
 
         }
