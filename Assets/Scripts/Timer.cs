@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+
         gameOver = false;
         highscore = PlayerPrefs.GetInt("TheHighscore");
         highscoreText.text = "Highscore: " + FormatTime(highscore);

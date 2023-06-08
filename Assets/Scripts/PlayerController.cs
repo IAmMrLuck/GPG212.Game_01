@@ -18,7 +18,9 @@ namespace ConaLuk.Honey
         private void Start()
         {
             rotationSpeed = 250f;
+
             soundManager.Play("Buzz");
+
             soundManager.Play("Theme");
         }
 

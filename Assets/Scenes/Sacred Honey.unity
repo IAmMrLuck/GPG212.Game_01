@@ -1279,19 +1279,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[0].pitch
-      value: 1.75
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[1].pitch
-      value: 1.31
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.515
+      value: 0.294
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.42
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 852195370822755773, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: m_RootOrder
