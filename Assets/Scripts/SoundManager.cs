@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class SoundManager : MonoBehaviour
 
         if(instance == null)
             instance = this;
+
         else
         {
             Destroy(gameObject);
@@ -28,6 +30,11 @@ public class SoundManager : MonoBehaviour
 
         foreach (Sound sound in sounds)
         {
+            if (SceneManager.GetActiveScene().name == "Title Screen")
+            {
+                sound.source.Pause();
+            }
+
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
 
@@ -35,8 +42,9 @@ public class SoundManager : MonoBehaviour
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
         }
-        
     }
+
+
 
     public void Play(string name)
     {

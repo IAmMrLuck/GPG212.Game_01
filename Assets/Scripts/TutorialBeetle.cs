@@ -7,6 +7,7 @@ public class TutorialBeetle : MonoBehaviour
 {
     [SerializeField] private GameObject beetleEnemy;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -16,4 +17,6 @@ public class TutorialBeetle : MonoBehaviour
 
         }
     }
+
+
 }
