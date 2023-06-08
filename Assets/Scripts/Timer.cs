@@ -57,11 +57,10 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         Debug.Log("StopTimer() Called");
-        PlayerPrefs.SetInt("TheHighscore", highscore);
 
         int score = Mathf.FloorToInt(elapsedTime);
 
-        if (score > highscore)
+        if (score > PlayerPrefs.GetInt("TheHighscore"))
         {
             highscore = score; 
             highscoreText.text = "Highscore" + FormatTime(highscore);

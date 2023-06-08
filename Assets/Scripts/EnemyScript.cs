@@ -11,6 +11,7 @@ namespace ConaLuk.Honey
 
     public class EnemyScript : MonoBehaviour
     {
+
         [SerializeField] private Timer timer;
         [SerializeField] private ParticleSystem _particleSystem;
         [SerializeField] private SceneLoader scene;

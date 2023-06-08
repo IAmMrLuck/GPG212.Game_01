@@ -9,7 +9,7 @@ namespace ConaLuk.Honey
     public class SpawnManager : MonoBehaviour
     {
         [SerializeField] private GameObject beeCharacter;
-
+        public SoundManager soundManager;
         [SerializeField] private GameObject beetleEnemy;
         [SerializeField] private GameObject waspEnemy;
         [SerializeField] private Transform[] spawnPoints;
@@ -25,6 +25,7 @@ namespace ConaLuk.Honey
 
         public void SpawnBeetle()
         {
+            soundManager.Play("Death");
 
             GameObject newBeetle = Instantiate(beetleEnemy);
 

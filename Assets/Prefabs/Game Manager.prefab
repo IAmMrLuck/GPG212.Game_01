@@ -120,10 +120,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beeCharacter: {fileID: 2165490651785122982, guid: 19b9ee3b89a2e6b4281f141c75cae89f, type: 3}
+  soundManager: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
   beetleEnemy: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
   waspEnemy: {fileID: 7608167254557512464, guid: 88022ec4f8c80844c97ec02da75d78e4, type: 3}
   spawnPoints: []
-  gameOverUI: {fileID: 4264892707561220742, guid: ea07337ac5c49ac41b809713c01261cc, type: 3}
 --- !u!114 &5611254962637381531
 MonoBehaviour:
   m_ObjectHideFlags: 0

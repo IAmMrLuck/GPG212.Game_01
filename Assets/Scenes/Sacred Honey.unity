@@ -1303,7 +1303,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[0].clip
@@ -1330,6 +1330,18 @@ PrefabInstance:
       value: Theme
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 82a16d1c16869584f9b65ea20537e126, type: 3}
+    - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[0].pitch
       value: 0.9
       objectReference: {fileID: 0}
@@ -1338,12 +1350,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0.294
       objectReference: {fileID: 0}
     - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: sounds.Array.data[1].volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852195370822755773, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
       propertyPath: m_RootOrder

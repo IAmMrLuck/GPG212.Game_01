@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9986f516dee64747a426a73f600e76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 576770609602872461, guid: 6c1cc1adb5bc81040a23059fbae6689e, type: 3}
   timer: {fileID: 5611254962637381531, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
   _particleSystem: {fileID: 54668778578953411}
   scene: {fileID: 5093770268820267773, guid: aefd16b45d88c8e46af6fe07d760d62d, type: 3}
